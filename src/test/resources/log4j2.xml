@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="basePath">./logs</Property>
+    </Properties>
+
+    <Appenders>
+
+        <!-- ========== Console Logs ========== -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1} - %m%n"/>
+        </Console>
+
+        <!-- ========== Rolling File Logs ========== -->
+        <RollingFile name="FileLogger"
+                     fileName="${basePath}/automation.log"
+                     filePattern="${basePath}/automation-%d{yyyy-MM-dd-HH-mm}-%i.log.gz">
+
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"/>
+
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5MB"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- Project package logging -->
+        <Logger name="bridgelabz" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+
+        <!-- Root logger -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>

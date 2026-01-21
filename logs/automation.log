@@ -1,0 +1,77 @@
+2026-01-21 16:09:08 INFO  DriverHooks - 🚀 Driver setup started
+2026-01-21 16:09:08 INFO  DriverHooks - 🧩 Initializing WebDriver
+2026-01-21 16:09:08 INFO  DriverFactory - 🚀 Starting WebDriver creation
+2026-01-21 16:09:08 INFO  DriverFactory - Browser       : chrome
+2026-01-21 16:09:08 INFO  DriverFactory - Headless      : false
+2026-01-21 16:09:08 INFO  DriverFactory - Grid Enabled  : false
+2026-01-21 16:09:08 INFO  DriverFactory - Initializing Chrome Driver
+2026-01-21 16:09:09 INFO  DriverManager - ✅ WebDriver successfully set into ThreadLocal
+2026-01-21 16:09:09 INFO  DriverHooks - ✅ WebDriver initialized successfully
+2026-01-21 16:09:09 INFO  DriverHooks - ⏱ Setting implicit wait: 10 seconds
+2026-01-21 16:09:09 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-21 16:09:09 INFO  DriverHooks - 🧹 Deleting all cookies
+2026-01-21 16:09:09 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-21 16:09:09 INFO  DriverHooks - 🖥 Maximizing browser window
+2026-01-21 16:09:09 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-21 16:09:09 INFO  DriverHooks - 🌐 Navigating to URL: https://tutorialsninja.com/demo
+2026-01-21 16:09:09 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-21 16:09:10 INFO  DriverHooks - ✅ Driver setup completed successfully
+2026-01-21 16:09:10 INFO  AllureHooks - 🧾 Creating Allure environment details
+2026-01-21 16:09:10 INFO  AllureHooks - ✅ Allure environment file created
+2026-01-21 16:09:10 INFO  AllureHooks - ▶️ Starting Scenario: user login with valid credentials
+2026-01-21 16:09:10 INFO  AllureAttachmentUtil - Allure log attached: ▶️ Starting Scenario: user login with valid credentials
+2026-01-21 16:09:10 DEBUG DriverManager - WebDriver alive status: true
+2026-01-21 16:09:10 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-21 16:09:10 INFO  HomePage - Verifying user landed on Home page
+2026-01-21 16:09:10 INFO  BasePage - Waiting for visibility of element: By.xpath: //a[normalize-space()='Desktops']
+2026-01-21 16:09:10 INFO  HomePage - Home page loaded successfully
+2026-01-21 16:09:10 INFO  HomePage - Navigating to Login page
+2026-01-21 16:09:10 INFO  BasePage - Waiting for element to be clickable: By.xpath: //a[@title='My Account']
+2026-01-21 16:09:10 INFO  HomePage - Clicking on My Account link
+2026-01-21 16:09:10 INFO  BasePage - Clicking on element: By.xpath: //a[@title='My Account']
+2026-01-21 16:09:10 INFO  BasePage - Waiting for element to be clickable: By.xpath: //a[@title='My Account']
+2026-01-21 16:09:10 INFO  BasePage - Waiting for element to be clickable: By.xpath: //a[normalize-space()='Login']
+2026-01-21 16:09:10 INFO  HomePage - Clicking on Login link
+2026-01-21 16:09:10 INFO  BasePage - Clicking on element: By.xpath: //a[normalize-space()='Login']
+2026-01-21 16:09:10 INFO  BasePage - Waiting for element to be clickable: By.xpath: //a[normalize-space()='Login']
+2026-01-21 16:09:10 INFO  BasePage - Waiting for visibility of element: By.xpath: //input[@value='Login']
+2026-01-21 16:09:11 INFO  HomePage - Login page loaded successfully
+2026-01-21 16:09:11 DEBUG DriverManager - WebDriver alive status: true
+2026-01-21 16:09:11 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-21 16:09:11 DEBUG DriverManager - WebDriver alive status: true
+2026-01-21 16:09:11 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-21 16:09:11 INFO  LoginPage - Entering login credentials
+2026-01-21 16:09:11 INFO  LoginPage - Entering email address
+2026-01-21 16:09:11 INFO  BasePage - Waiting for visibility of element: By.id: input-email
+2026-01-21 16:09:11 INFO  BasePage - Typing 'kseetaramaraju1@gmail.com' into By.id: input-email
+2026-01-21 16:09:11 INFO  LoginPage - Entering password
+2026-01-21 16:09:11 INFO  BasePage - Waiting for visibility of element: By.id: input-password
+2026-01-21 16:09:11 INFO  BasePage - Typing 'Seeta@1234566' into By.id: input-password
+2026-01-21 16:09:11 INFO  LoginPage - Attempting to click Login button
+2026-01-21 16:09:11 INFO  BasePage - Waiting for element to be clickable: By.xpath: //input[@value='Login']
+2026-01-21 16:09:11 INFO  BasePage - Clicking on element: By.xpath: //input[@value='Login']
+2026-01-21 16:09:11 INFO  BasePage - Waiting for element to be clickable: By.xpath: //input[@value='Login']
+2026-01-21 16:09:12 INFO  LoginPage - Login button clicked
+2026-01-21 16:09:12 INFO  HomePage - Verifying navigation to Home page after login
+2026-01-21 16:09:12 INFO  BasePage - Checking visibility of element: By.xpath: //h2[normalize-space()='My Orders']
+2026-01-21 16:09:22 WARN  BasePage - Element NOT visible: By.xpath: //h2[normalize-space()='My Orders']
+2026-01-21 16:09:22 INFO  HomePage - Home page navigation status: false
+2026-01-21 16:09:22 INFO  AllureHooks - ⏹ Scenario finished: user login with valid credentials | Status: FAILED
+2026-01-21 16:09:22 INFO  AllureHooks - Cucumber @After hook started for scenario: user login with valid credentials
+2026-01-21 16:09:22 INFO  AllureHooks - Scenario status: FAILED
+2026-01-21 16:09:22 ERROR AllureHooks - Scenario ended with status: FAILED | Name: user login with valid credentials
+2026-01-21 16:09:22 INFO  AllureAttachmentUtil - Allure log attached: ❌ Scenario ended with status: FAILED | Name: user login with valid credentials
+2026-01-21 16:09:22 DEBUG DriverManager - WebDriver alive status: true
+2026-01-21 16:09:22 INFO  AllureHooks - Driver is alive. Capturing screenshot for Allure.
+2026-01-21 16:09:22 DEBUG DriverManager - WebDriver is present in ThreadLocal
+2026-01-21 16:09:22 INFO  AllureAttachmentUtil - Capturing screenshot for Allure
+2026-01-21 16:09:22 INFO  AllureAttachmentUtil - Screenshot attached to Allure successfully
+2026-01-21 16:09:22 INFO  AllureHooks - Capturing screenshot is Sccessfully Completed !!
+2026-01-21 16:09:22 INFO  AllureHooks - Cucumber @After hook completed for scenario: user login with valid credentials
+2026-01-21 16:09:22 INFO  DriverHooks - 🛑 Driver teardown started
+2026-01-21 16:09:22 DEBUG DriverManager - WebDriver alive status: true
+2026-01-21 16:09:22 INFO  DriverHooks - 🧨 Quitting WebDriver
+2026-01-21 16:09:22 INFO  DriverManager - 🧹 Quitting WebDriver
+2026-01-21 16:09:24 INFO  DriverManager - ✅ WebDriver quit successfully
+2026-01-21 16:09:24 DEBUG DriverManager - ThreadLocal WebDriver reference removed
+2026-01-21 16:09:24 INFO  DriverHooks - ✅ WebDriver quit successfully

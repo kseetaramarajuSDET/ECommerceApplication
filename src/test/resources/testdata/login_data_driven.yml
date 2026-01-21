@@ -1,0 +1,12 @@
+logins:
+  - email: "kseetaramaraju1@gmail.com"
+    password: "Seeta@123"
+    valid: true
+
+  - email: "kseetaramaraju2@gmail.com"
+    password: "Seeta@1233"
+    valid: false
+
+  - email: "kseetaramaraju3@gmail.com"
+    password: "Seeta@1234"
+    valid: false
