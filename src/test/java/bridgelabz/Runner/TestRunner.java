@@ -35,7 +35,7 @@ import io.cucumber.testng.CucumberOptions;
                 "junit:target/CucumberReports/cucumber.xml",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
-        tags = "@login_TC_001"
+        tags = "@search"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
