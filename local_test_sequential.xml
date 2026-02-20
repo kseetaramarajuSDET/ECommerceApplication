@@ -1,0 +1,29 @@
+<suite name="Cucumber Multi Browser" parallel="none" thread-count="3">
+
+
+    <listeners>
+        <listener class-name="bridgelabz.utils.AllureTestListener"/>
+    </listeners>
+
+    <test name="Chrome Run">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="bridgelabz.Runner.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Edge Run">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="bridgelabz.Runner.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Firefox Run">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="bridgelabz.Runner.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>

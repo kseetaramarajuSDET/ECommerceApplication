@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration status="DEBUG">
 
     <Properties>
-        <Property name="basePath">./logs</Property>
+        <Property name="basePath">target/logs</Property>
+        <Property name="pattern">
+            %d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1} - %m%n
+        </Property>
     </Properties>
 
     <Appenders>
 
-        <!-- ========== Console Logs ========== -->
+        <!-- Console -->
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout
-                    pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1} - %m%n"/>
+            <PatternLayout pattern="${pattern}"/>
         </Console>
 
-        <!-- ========== Rolling File Logs ========== -->
+        <!-- Rolling File -->
         <RollingFile name="FileLogger"
                      fileName="${basePath}/automation.log"
-                     filePattern="${basePath}/automation-%d{yyyy-MM-dd-HH-mm}-%i.log.gz">
+                     filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log.gz">
 
-            <PatternLayout
-                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"/>
+            <PatternLayout pattern="${pattern}"/>
 
+            <!-- USE ONLY ONE POLICY -->
             <Policies>
-                <SizeBasedTriggeringPolicy size="5MB"/>
-                <TimeBasedTriggeringPolicy/>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
             </Policies>
 
             <DefaultRolloverStrategy max="10"/>
+
         </RollingFile>
 
     </Appenders>
 
     <Loggers>
 
-        <!-- Project package logging -->
         <Logger name="bridgelabz" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
         </Logger>
 
-        <!-- Root logger -->
         <Root level="info">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>

@@ -1,5 +1,6 @@
 package bridgelabz.hooks;
 
+import bridgelabz.driver.BrowserContext;
 import bridgelabz.utils.ConfigReader;
 import bridgelabz.driver.DriverFactory;
 import bridgelabz.driver.DriverManager;
@@ -12,8 +13,7 @@ import java.time.Duration;
 
 public class DriverHooks {
 
-    private static final Logger log =
-            LogManager.getLogger(DriverHooks.class);
+    private static final Logger log = LogManager.getLogger(DriverHooks.class);
 
     @Before(order = 0)
     public void setUp() {
@@ -27,24 +27,24 @@ public class DriverHooks {
             log.info("✅ WebDriver initialized successfully");
 
             // 2️⃣ Browser configurations
-            log.info("⏱ Setting implicit wait: {} seconds",
-                    ConfigReader.timeout());
-            DriverManager.getDriver()
-                    .manage()
-                    .timeouts()
-                    .implicitlyWait(
-                            Duration.ofSeconds(ConfigReader.timeout())
-                    );
+            log.info("⏱ Setting implicit wait: {} seconds", ConfigReader.timeout());
+            DriverManager.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(ConfigReader.timeout()));
+
+
+            log.info("⏱ Setting PageLoadTimeOut wait ");
+            // Give the network a second to breathe in parallel mode
+            DriverManager.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 
             log.info("🧹 Deleting all cookies");
             DriverManager.getDriver().manage().deleteAllCookies();
 
+            //if (!ConfigReader.isGridEnabled()) {
             log.info("🖥 Maximizing browser window");
             DriverManager.getDriver().manage().window().maximize();
+            //}
 
             // 3️⃣ Launch application
-            log.info("🌐 Navigating to URL: {}",
-                    ConfigReader.baseUrl());
+            log.info("🌐 Navigating to URL: {}", ConfigReader.baseUrl());
             DriverManager.getDriver().get(ConfigReader.baseUrl());
 
             log.info("✅ Driver setup completed successfully");

@@ -1,91 +1,91 @@
-2026-01-22 15:59:00 INFO  DriverHooks - ✅ Driver setup completed successfully
-2026-01-22 15:59:00 INFO  AllureHooks - 🧾 Creating Allure environment details
-2026-01-22 15:59:00 INFO  AllureHooks - ✅ Allure environment file created
-2026-01-22 15:59:00 INFO  AllureHooks - ▶️ Starting Scenario: Search for a non-existent product
-2026-01-22 15:59:00 INFO  AllureAttachmentUtil - Allure log attached: ▶️ Starting Scenario: Search for a non-existent product
-2026-01-22 15:59:00 DEBUG DriverManager - WebDriver alive status: true
-2026-01-22 15:59:00 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:00 INFO  HomePage - Verifying user landed on Home page
-2026-01-22 15:59:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //a[normalize-space()='Desktops']
-2026-01-22 15:59:00 INFO  HomePage - Home page loaded successfully
-2026-01-22 15:59:00 DEBUG DriverManager - WebDriver alive status: true
-2026-01-22 15:59:00 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:00 INFO  SearchPage - Entering search term in search box
-2026-01-22 15:59:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //input[@placeholder='Search']
-2026-01-22 15:59:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //input[@placeholder='Search']
-2026-01-22 15:59:00 INFO  BasePage - Typing 'asdlkjasdlj' into By.xpath: //input[@placeholder='Search']
-2026-01-22 15:59:00 INFO  SearchPage - Search term entered: asdlkjasdlj
-2026-01-22 15:59:00 INFO  SearchPage - Clicking on Search button
-2026-01-22 15:59:00 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
-2026-01-22 15:59:00 INFO  BasePage - Clicking on element: By.xpath: //button[@class='btn btn-default btn-lg']
-2026-01-22 15:59:00 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
-2026-01-22 15:59:00 INFO  SearchPage - Search button clicked
-2026-01-22 15:59:00 INFO  SearchPage - Verifying 'Product Not Found' error message
-2026-01-22 15:59:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
-2026-01-22 15:59:00 INFO  BasePage - Checking visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
-2026-01-22 15:59:00 INFO  SearchPage - 'Product Not Found' error message displayed: true
-2026-01-22 15:59:00 INFO  AllureHooks - ⏹ Scenario finished: Search for a non-existent product | Status: PASSED
-2026-01-22 15:59:00 INFO  AllureHooks - Cucumber @After hook started for scenario: Search for a non-existent product
-2026-01-22 15:59:00 INFO  AllureHooks - Scenario status: PASSED
-2026-01-22 15:59:00 INFO  AllureHooks - Scenario PASSED: Search for a non-existent product
-2026-01-22 15:59:00 INFO  AllureAttachmentUtil - Allure log attached: ✅ Scenario PASSED: Search for a non-existent product
-2026-01-22 15:59:00 INFO  AllureHooks - Cucumber @After hook completed for scenario: Search for a non-existent product
-2026-01-22 15:59:00 INFO  DriverHooks - 🛑 Driver teardown started
-2026-01-22 15:59:00 DEBUG DriverManager - WebDriver alive status: true
-2026-01-22 15:59:00 INFO  DriverHooks - 🧨 Quitting WebDriver
-2026-01-22 15:59:00 INFO  DriverManager - 🧹 Quitting WebDriver
-2026-01-22 15:59:00 INFO  DriverManager - ✅ WebDriver quit successfully
-2026-01-22 15:59:00 DEBUG DriverManager - ThreadLocal WebDriver reference removed
-2026-01-22 15:59:00 INFO  DriverHooks - ✅ WebDriver quit successfully
-2026-01-22 15:59:00 INFO  DriverHooks - 🚀 Driver setup started
-2026-01-22 15:59:00 INFO  DriverHooks - 🧩 Initializing WebDriver
-2026-01-22 15:59:00 INFO  DriverFactory - 🚀 Starting WebDriver creation
-2026-01-22 15:59:00 INFO  DriverFactory - Browser       : chrome
-2026-01-22 15:59:00 INFO  DriverFactory - Headless      : false
-2026-01-22 15:59:00 INFO  DriverFactory - Grid Enabled  : false
-2026-01-22 15:59:00 INFO  DriverFactory - Initializing Chrome Driver
-2026-01-22 15:59:01 INFO  DriverManager - ✅ WebDriver successfully set into ThreadLocal
-2026-01-22 15:59:01 INFO  DriverHooks - ✅ WebDriver initialized successfully
-2026-01-22 15:59:01 INFO  DriverHooks - ⏱ Setting implicit wait: 10 seconds
-2026-01-22 15:59:01 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:01 INFO  DriverHooks - 🧹 Deleting all cookies
-2026-01-22 15:59:01 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:01 INFO  DriverHooks - 🖥 Maximizing browser window
-2026-01-22 15:59:01 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:01 INFO  DriverHooks - 🌐 Navigating to URL: https://tutorialsninja.com/demo
-2026-01-22 15:59:01 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:02 INFO  DriverHooks - ✅ Driver setup completed successfully
-2026-01-22 15:59:02 INFO  AllureHooks - 🧾 Creating Allure environment details
-2026-01-22 15:59:02 INFO  AllureHooks - ✅ Allure environment file created
-2026-01-22 15:59:02 INFO  AllureHooks - ▶️ Starting Scenario: Search without entering any product name
-2026-01-22 15:59:02 INFO  AllureAttachmentUtil - Allure log attached: ▶️ Starting Scenario: Search without entering any product name
-2026-01-22 15:59:02 DEBUG DriverManager - WebDriver alive status: true
-2026-01-22 15:59:02 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:02 INFO  HomePage - Verifying user landed on Home page
-2026-01-22 15:59:02 INFO  BasePage - Waiting for visibility of element: By.xpath: //a[normalize-space()='Desktops']
-2026-01-22 15:59:02 INFO  HomePage - Home page loaded successfully
-2026-01-22 15:59:02 DEBUG DriverManager - WebDriver alive status: true
-2026-01-22 15:59:02 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
-2026-01-22 15:59:02 INFO  SearchPage - User leaves search box empty
-2026-01-22 15:59:02 INFO  SearchPage - Clicking on Search button
-2026-01-22 15:59:02 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
-2026-01-22 15:59:02 INFO  BasePage - Clicking on element: By.xpath: //button[@class='btn btn-default btn-lg']
-2026-01-22 15:59:02 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
-2026-01-22 15:59:02 INFO  SearchPage - Search button clicked
-2026-01-22 15:59:02 INFO  SearchPage - Verifying 'Product Not Found' error message
-2026-01-22 15:59:02 INFO  BasePage - Waiting for visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
-2026-01-22 15:59:02 INFO  BasePage - Checking visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
-2026-01-22 15:59:02 INFO  SearchPage - 'Product Not Found' error message displayed: true
-2026-01-22 15:59:02 INFO  AllureHooks - ⏹ Scenario finished: Search without entering any product name | Status: PASSED
-2026-01-22 15:59:02 INFO  AllureHooks - Cucumber @After hook started for scenario: Search without entering any product name
-2026-01-22 15:59:02 INFO  AllureHooks - Scenario status: PASSED
-2026-01-22 15:59:02 INFO  AllureHooks - Scenario PASSED: Search without entering any product name
-2026-01-22 15:59:02 INFO  AllureAttachmentUtil - Allure log attached: ✅ Scenario PASSED: Search without entering any product name
-2026-01-22 15:59:02 INFO  AllureHooks - Cucumber @After hook completed for scenario: Search without entering any product name
-2026-01-22 15:59:02 INFO  DriverHooks - 🛑 Driver teardown started
-2026-01-22 15:59:02 DEBUG DriverManager - WebDriver alive status: true
-2026-01-22 15:59:02 INFO  DriverHooks - 🧨 Quitting WebDriver
-2026-01-22 15:59:02 INFO  DriverManager - 🧹 Quitting WebDriver
-2026-01-22 15:59:02 INFO  DriverManager - ✅ WebDriver quit successfully
-2026-01-22 15:59:02 DEBUG DriverManager - ThreadLocal WebDriver reference removed
-2026-01-22 15:59:02 INFO  DriverHooks - ✅ WebDriver quit successfully
+2026-01-24 15:34:00 INFO  DriverHooks - ✅ Driver setup completed successfully
+2026-01-24 15:34:00 INFO  AllureHooks - 🧾 Creating Allure environment details
+2026-01-24 15:34:00 INFO  AllureHooks - ✅ Allure environment file created
+2026-01-24 15:34:00 INFO  AllureHooks - ▶️ Starting Scenario: Search for a non-existent product
+2026-01-24 15:34:00 INFO  AllureAttachmentUtil - Allure log attached: ▶️ Starting Scenario: Search for a non-existent product
+2026-01-24 15:34:00 DEBUG DriverManager - WebDriver alive status: true
+2026-01-24 15:34:00 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:00 INFO  HomePage - Verifying user landed on Home page
+2026-01-24 15:34:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //a[normalize-space()='Desktops']
+2026-01-24 15:34:00 INFO  HomePage - Home page loaded successfully
+2026-01-24 15:34:00 DEBUG DriverManager - WebDriver alive status: true
+2026-01-24 15:34:00 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:00 INFO  SearchPage - Entering search term in search box
+2026-01-24 15:34:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //input[@placeholder='Search']
+2026-01-24 15:34:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //input[@placeholder='Search']
+2026-01-24 15:34:00 INFO  BasePage - Typing 'asdlkjasdlj' into By.xpath: //input[@placeholder='Search']
+2026-01-24 15:34:00 INFO  SearchPage - Search term entered: asdlkjasdlj
+2026-01-24 15:34:00 INFO  SearchPage - Clicking on Search button
+2026-01-24 15:34:00 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
+2026-01-24 15:34:00 INFO  BasePage - Clicking on element: By.xpath: //button[@class='btn btn-default btn-lg']
+2026-01-24 15:34:00 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
+2026-01-24 15:34:00 INFO  SearchPage - Search button clicked
+2026-01-24 15:34:00 INFO  SearchPage - Verifying 'Product Not Found' error message
+2026-01-24 15:34:00 INFO  BasePage - Waiting for visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
+2026-01-24 15:34:00 INFO  BasePage - Checking visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
+2026-01-24 15:34:00 INFO  SearchPage - 'Product Not Found' error message displayed: true
+2026-01-24 15:34:00 INFO  AllureHooks - ⏹ Scenario finished: Search for a non-existent product | Status: PASSED
+2026-01-24 15:34:00 INFO  AllureHooks - Cucumber @After hook started for scenario: Search for a non-existent product
+2026-01-24 15:34:00 INFO  AllureHooks - Scenario status: PASSED
+2026-01-24 15:34:00 INFO  AllureHooks - Scenario PASSED: Search for a non-existent product
+2026-01-24 15:34:00 INFO  AllureAttachmentUtil - Allure log attached: ✅ Scenario PASSED: Search for a non-existent product
+2026-01-24 15:34:00 INFO  AllureHooks - Cucumber @After hook completed for scenario: Search for a non-existent product
+2026-01-24 15:34:00 INFO  DriverHooks - 🛑 Driver teardown started
+2026-01-24 15:34:00 DEBUG DriverManager - WebDriver alive status: true
+2026-01-24 15:34:00 INFO  DriverHooks - 🧨 Quitting WebDriver
+2026-01-24 15:34:00 INFO  DriverManager - 🧹 Quitting WebDriver
+2026-01-24 15:34:01 INFO  DriverManager - ✅ WebDriver quit successfully
+2026-01-24 15:34:01 DEBUG DriverManager - ThreadLocal WebDriver reference removed
+2026-01-24 15:34:01 INFO  DriverHooks - ✅ WebDriver quit successfully
+2026-01-24 15:34:01 INFO  DriverHooks - 🚀 Driver setup started
+2026-01-24 15:34:01 INFO  DriverHooks - 🧩 Initializing WebDriver
+2026-01-24 15:34:01 INFO  DriverFactory - 🚀 Starting WebDriver creation
+2026-01-24 15:34:01 INFO  DriverFactory - Browser       : chrome
+2026-01-24 15:34:01 INFO  DriverFactory - Headless      : false
+2026-01-24 15:34:01 INFO  DriverFactory - Grid Enabled  : false
+2026-01-24 15:34:01 INFO  DriverFactory - Initializing Chrome Driver
+2026-01-24 15:34:02 INFO  DriverManager - ✅ WebDriver successfully set into ThreadLocal
+2026-01-24 15:34:02 INFO  DriverHooks - ✅ WebDriver initialized successfully
+2026-01-24 15:34:02 INFO  DriverHooks - ⏱ Setting implicit wait: 10 seconds
+2026-01-24 15:34:02 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:02 INFO  DriverHooks - 🧹 Deleting all cookies
+2026-01-24 15:34:02 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:02 INFO  DriverHooks - 🖥 Maximizing browser window
+2026-01-24 15:34:02 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:02 INFO  DriverHooks - 🌐 Navigating to URL: https://tutorialsninja.com/demo
+2026-01-24 15:34:02 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:30 INFO  DriverHooks - ✅ Driver setup completed successfully
+2026-01-24 15:34:30 INFO  AllureHooks - 🧾 Creating Allure environment details
+2026-01-24 15:34:30 INFO  AllureHooks - ✅ Allure environment file created
+2026-01-24 15:34:30 INFO  AllureHooks - ▶️ Starting Scenario: Search without entering any product name
+2026-01-24 15:34:30 INFO  AllureAttachmentUtil - Allure log attached: ▶️ Starting Scenario: Search without entering any product name
+2026-01-24 15:34:30 DEBUG DriverManager - WebDriver alive status: true
+2026-01-24 15:34:30 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:30 INFO  HomePage - Verifying user landed on Home page
+2026-01-24 15:34:30 INFO  BasePage - Waiting for visibility of element: By.xpath: //a[normalize-space()='Desktops']
+2026-01-24 15:34:30 INFO  HomePage - Home page loaded successfully
+2026-01-24 15:34:30 DEBUG DriverManager - WebDriver alive status: true
+2026-01-24 15:34:30 DEBUG DriverManager - WebDriver fetched successfully from ThreadLocal
+2026-01-24 15:34:30 INFO  SearchPage - User leaves search box empty
+2026-01-24 15:34:30 INFO  SearchPage - Clicking on Search button
+2026-01-24 15:34:30 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
+2026-01-24 15:34:30 INFO  BasePage - Clicking on element: By.xpath: //button[@class='btn btn-default btn-lg']
+2026-01-24 15:34:30 INFO  BasePage - Waiting for element to be clickable: By.xpath: //button[@class='btn btn-default btn-lg']
+2026-01-24 15:34:31 INFO  SearchPage - Search button clicked
+2026-01-24 15:34:31 INFO  SearchPage - Verifying 'Product Not Found' error message
+2026-01-24 15:34:31 INFO  BasePage - Waiting for visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
+2026-01-24 15:34:31 INFO  BasePage - Checking visibility of element: By.xpath: //p[contains(text(),'There is no product that matches the search criter')]
+2026-01-24 15:34:31 INFO  SearchPage - 'Product Not Found' error message displayed: true
+2026-01-24 15:34:31 INFO  AllureHooks - ⏹ Scenario finished: Search without entering any product name | Status: PASSED
+2026-01-24 15:34:31 INFO  AllureHooks - Cucumber @After hook started for scenario: Search without entering any product name
+2026-01-24 15:34:31 INFO  AllureHooks - Scenario status: PASSED
+2026-01-24 15:34:31 INFO  AllureHooks - Scenario PASSED: Search without entering any product name
+2026-01-24 15:34:31 INFO  AllureAttachmentUtil - Allure log attached: ✅ Scenario PASSED: Search without entering any product name
+2026-01-24 15:34:31 INFO  AllureHooks - Cucumber @After hook completed for scenario: Search without entering any product name
+2026-01-24 15:34:31 INFO  DriverHooks - 🛑 Driver teardown started
+2026-01-24 15:34:31 DEBUG DriverManager - WebDriver alive status: true
+2026-01-24 15:34:31 INFO  DriverHooks - 🧨 Quitting WebDriver
+2026-01-24 15:34:31 INFO  DriverManager - 🧹 Quitting WebDriver
+2026-01-24 15:34:31 INFO  DriverManager - ✅ WebDriver quit successfully
+2026-01-24 15:34:31 DEBUG DriverManager - ThreadLocal WebDriver reference removed
+2026-01-24 15:34:31 INFO  DriverHooks - ✅ WebDriver quit successfully

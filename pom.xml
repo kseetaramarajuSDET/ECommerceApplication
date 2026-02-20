@@ -46,7 +46,8 @@
 
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>testNG.xml</suiteXmlFile>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                         </suiteXmlFiles>
 
                         <!-- Allure output location -->
@@ -56,9 +57,10 @@
                             </allure.results.directory>
 
                             <!-- Optional: run by cucumber tags -->
-                            <!--
-                            <cucumber.filter.tags>@search</cucumber.filter.tags>
-                            -->
+                            <!--suppress UnresolvedMavenProperty -->
+                            <browser>${browser}</browser>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <cucumber.filter.tags>${cucumber.filter.tags}</cucumber.filter.tags>
                         </systemPropertyVariables>
                     </configuration>
 
@@ -155,7 +157,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.38.0</version>
+            <version>4.28.0</version>
         </dependency>
 
 

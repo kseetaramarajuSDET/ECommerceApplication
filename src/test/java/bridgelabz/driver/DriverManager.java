@@ -6,8 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class DriverManager {
 
-    private static final Logger log =
-            LogManager.getLogger(DriverManager.class);
+    private static final Logger log = LogManager.getLogger(DriverManager.class);
 
     private DriverManager() {
         // Prevent instantiation
@@ -22,9 +21,7 @@ public class DriverManager {
 
         if (driver == null) {
             log.error("❌ WebDriver requested but NOT initialized for this thread");
-            throw new IllegalStateException(
-                    "WebDriver is not initialized. Did you forget to use Hooks?"
-            );
+            throw new IllegalStateException("WebDriver is not initialized. Did you forget to use Hooks?");
         }
 
         log.debug("WebDriver fetched successfully from ThreadLocal");

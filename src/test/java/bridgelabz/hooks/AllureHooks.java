@@ -1,12 +1,12 @@
 package bridgelabz.hooks;
 
+import bridgelabz.driver.BrowserContext;
 import bridgelabz.driver.DriverManager;
 import bridgelabz.utils.AllureAttachmentUtil;
 import bridgelabz.utils.AllureEnvironmentUtil;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
-import io.cucumber.java.Status;
+import bridgelabz.utils.ConfigReader;
+import io.cucumber.java.*;
+import io.qameta.allure.Allure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,18 +15,29 @@ public class AllureHooks {
     private static final Logger log =
             LogManager.getLogger(AllureHooks.class);
 
-    @Before(order = 1)
-    public void setupAllureEnvironment() {
-        log.info("🧾 Creating Allure environment details");
-        AllureEnvironmentUtil.createEnvironmentFile();
-        log.info("✅ Allure environment file created");
-    }
+//    @BeforeAll
+//    public static void setupAllureEnvironmentOnce() {
+//        log.info("🧾 Creating Allure environment details");
+//        AllureEnvironmentUtil.createEnvironmentFile();
+//        log.info("✅ Allure environment file created");
+//    }
 
-    @Before(order = 2)
+    @Before(order = 1)
     public void beforeScenario(Scenario scenario) {
-        log.info("▶️ Starting Scenario: {}", scenario.getName());
+        String browser = BrowserContext.getBrowser() != null ? BrowserContext.getBrowser() : ConfigReader.browser();
+
+        log.info("▶️ Starting Scenario: {} | Browser: {}",
+                scenario.getName(), browser);
+
+        // FIX: Add browser as an Allure Parameter.
+        // This forces Allure to treat "Scenario A - Chrome" and "Scenario A - Edge" as different tests.
+        Allure.parameter("Browser", browser);
+
+        // Keep your labels if you like them for filtering
+        Allure.label("browser", browser);
+
         AllureAttachmentUtil.attachLog(
-                "▶️ Starting Scenario: " + scenario.getName()
+                "▶️ Starting Scenario: " + scenario.getName() + " | Browser: " + browser
         );
     }
 

@@ -13,29 +13,54 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Parameters;
 
 import java.net.URL;
 
 public final class DriverFactory {
 
-    private static final Logger log =
-            LogManager.getLogger(DriverFactory.class);
+    private static final Logger log = LogManager.getLogger(DriverFactory.class);
 
 
     private DriverFactory() {
     }
 
+
     public static WebDriver createDriver() {
 
-        String browser = ConfigReader.browser().toLowerCase();
+
+        log.info("Thread: {} | BrowserContext = {}", Thread.currentThread().getName(), BrowserContext.getBrowser());
+
+
+        String browser;
+        //Inside DriverFactory.createDriver()
+        if (BrowserContext.getBrowser() != null && BrowserContext.getBrowser()!="") {
+            browser = BrowserContext.getBrowser();
+        } else {
+            browser = ConfigReader.browser();
+        }
+
+        System.err.println("BrowserContext.getBrowser()" + BrowserContext.getBrowser());
+        System.err.println("ConfigReader.browser()" + ConfigReader.browser());
+
+        // No more ternary operators needed here, because Hooks already did the work!
         boolean headless = ConfigReader.headless();
         boolean gridEnabled = ConfigReader.isGridEnabled();
+        String gridUrl = ConfigReader.gridUrl();
+        String baseUrl = ConfigReader.baseUrl();
+        int timeout = ConfigReader.timeout();
 
         log.info("🚀 Starting WebDriver creation");
         log.info("Browser       : {}", browser);
         log.info("Headless      : {}", headless);
         log.info("Grid Enabled  : {}", gridEnabled);
+        log.info("Grid Url : {}", gridUrl);
+        log.info("Base Url : {}", baseUrl);
+        log.info("TimeOut : {}", timeout);
 
+        System.out.println("-----------------------> ");
+        System.err.println("BrowserContext.getBrowser()" + BrowserContext.getBrowser());
+        System.err.println("ConfigReader.browser()" + ConfigReader.browser());
         try {
             switch (browser) {
 
@@ -48,9 +73,7 @@ public final class DriverFactory {
                         firefox.addArguments("--headless");
                     }
 
-                    return gridEnabled
-                            ? createRemoteDriver(firefox)
-                            : new FirefoxDriver(firefox);
+                    return gridEnabled ? createRemoteDriver(firefox) : new FirefoxDriver(firefox);
 
                 case "edge":
                     log.info("Initializing Edge Driver");
@@ -61,13 +84,12 @@ public final class DriverFactory {
                         edge.addArguments("--headless");
                     }
 
-                    return gridEnabled
-                            ? createRemoteDriver(edge)
-                            : new EdgeDriver(edge);
+                    return gridEnabled ? createRemoteDriver(edge) : new EdgeDriver(edge);
 
                 case "chrome":
                 default:
                     log.info("Initializing Chrome Driver");
+
                     ChromeOptions chrome = new ChromeOptions();
 
                     chrome.addArguments("--start-maximized");
@@ -78,9 +100,7 @@ public final class DriverFactory {
                         chrome.addArguments("--headless=new");
                     }
 
-                    return gridEnabled
-                            ? createRemoteDriver(chrome)
-                            : new ChromeDriver(chrome);
+                    return gridEnabled ? createRemoteDriver(chrome) : new ChromeDriver(chrome);
             }
         } catch (Exception e) {
             log.error("❌ Failed to initialize WebDriver", e);
@@ -89,14 +109,12 @@ public final class DriverFactory {
     }
 
 
-    private static WebDriver createRemoteDriver(MutableCapabilities options)
-            throws Exception {
+    private static WebDriver createRemoteDriver(MutableCapabilities options) throws Exception {
 
         String gridUrl = ConfigReader.gridUrl();
         log.info("Connecting to Selenium Grid at: {}", gridUrl);
 
-        WebDriver driver =
-                new RemoteWebDriver(new URL(gridUrl), options);
+        WebDriver driver = new RemoteWebDriver(new URL(gridUrl), options);
 
         log.info("✅ Remote WebDriver initialized successfully");
 
